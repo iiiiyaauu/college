@@ -4,13 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-    <button class="btn">Click Me!</button><br>
-    <canvas id="myCanvas" width="200px" height="100px"></canvas>
-    <canvas id="Canvas2" width="500px" height="500px"></canvas>
-    <script src="script.js"></script>
+    <h1 id="tema">WELCOME TO THE REALITY</h1>
+    <p id="text">there is you can think about</p>
+    <img id="photo" src="real.jpg" height="400">
+    <br>
+    <button onclick="change()">Next</button>
+    <button onclick="back()">Back</button>
+
+    <br>
+    <h3>the num of clicks</h3>
+    <h1 id="counter">0</h1>
+    <button onclick="plus()">add click</button>
+    <button onclick="minus()">minus click</button>
+
+
+<script>
+    function change(){
+        document.getElementById("photo").src="love.jpeg"
+        document.getElementById("text").innerHTML="A place where you can be loved"
+        document.getElementById("tema").innerHTML="WELCOME TO ANIME"
+        document.body.style.background="wheat"; 
+
+        
+        
+    }
+
+    function back(){
+        document.getElementById("photo").src="real.jpg"
+        document.getElementById("text").innerHTML="there is you can think about"
+        document.getElementById("tema").innerHTML="WELCOME TO THE REALITY"
+        document.body.style.background="#557a95"; 
+    }
+
+    var c=0
+    function plus(){
+        c++
+        document.getElementById("counter").innerHTML=c
+    }
+
+    function minus(){
+        c--
+        document.getElementById("counter").innerHTML=c
+    }
+
+
+
+</script>
+
+
+
 </body>
 </html>
